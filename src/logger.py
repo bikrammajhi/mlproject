@@ -2,6 +2,8 @@ import logging
 import os 
 from datetime import datetime
 
+# Youtube link: https://youtu.be/wrpu-Qr_Yvk?list=PLCgehTvigkDPyr-MIjjxuCTMY5jC1BdD7
+
 LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d-%H-%M_%S')}.log"
 logs_path = os.path.join(os.getcwd(), "logs", LOG_FILE)
 os.makedirs(logs_path, exist_ok=True)
@@ -14,3 +16,10 @@ logging.basicConfig(
     level=logging.DEBUG,
 )
 
+if __name__ == "__main__":
+    logging.info("Logging started")
+    logging.debug("Debug message")
+    logging.info("Info message")
+    logging.warning("Warning message")
+    logging.error("Error message")
+    logging.critical("Critical message")
